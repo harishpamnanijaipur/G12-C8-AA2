@@ -24,8 +24,6 @@ angle=0
 change=0
 distance=5
 forward=False
-
- 
 enemycount=10
 enemies=[]
 evlx=[]
@@ -109,10 +107,7 @@ while True:
     enemy.y+=evly[i]
     #Move enemy to center once hit the player
     if enemy.colliderect(player):
-        for enemy in enemies:
-         enemy.x=1000
-         enemy.y=1000
-              
+                    
         over=True  
         player_image=enemy_image
     
@@ -130,7 +125,7 @@ while True:
       enemy.y=random.choice([random.randint(-250,0),random.randint(600,840)])
       enemy.x=random.choice([random.randint(-250,0),random.randint(400,600)])
       score+=1
-      
+      printf("Now you killed",score,"enemies")
       
    
     screen.blit(enemy_image,enemy)
